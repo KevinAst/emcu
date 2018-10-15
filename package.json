@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "description": "Espruino MCU (Micro Controller Unit)",
   "scripts": {
-    "e": "echo '*** Espruino command line:' && ??do something",
+    "e:COMMENT": "?? --port COM6 BELOW is temporary",
+    "e": "echo '*** Espruino command line:' && espruino --port COM6",
+    "e:list": "echo '*** Espruino list devices:' && espruino --list",
     "e:flash": "echo '*** Espruino flash:' && ??do something",
-    "pkgReview": "echo '*** Showing outdated installed packages:' && npm outdated --long || true",
+    "pkgReview": "echo '*** Showing outdated installed packages:' && npm outdated --long || true"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/KevinAst/emcu/issues"
   },
-  "homepage": "https://github.com/KevinAst/emcu"
+  "homepage": "https://github.com/KevinAst/emcu",
+  "devDependencies": {
+    "espruino": "^0.1.13"
+  }
 }
