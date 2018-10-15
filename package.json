@@ -1,0 +1,28 @@
+{
+  "name": "emcu",
+  "version": "0.1.0",
+  "description": "Espruino MCU (Micro Controller Unit)",
+  "scripts": {
+    "e": "echo '*** Espruino command line:' && ??do something",
+    "e:flash": "echo '*** Espruino flash:' && ??do something",
+    "pkgReview": "echo '*** Showing outdated installed packages:' && npm outdated --long || true",
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KevinAst/emcu.git"
+  },
+  "keywords": [
+    "espruino",
+    "mcu",
+    "microcontroller",
+    "js",
+    "javascript",
+    "astx"
+  ],
+  "author": "Kevin J. Bridges <kevinast@gmail.com> (https://github.com/KevinAst)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KevinAst/emcu/issues"
+  },
+  "homepage": "https://github.com/KevinAst/emcu"
+}
