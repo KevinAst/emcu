@@ -2,6 +2,8 @@
 
 var TestMod1 = require('TestMod1');
 
+// (function () { // KEY: uncomment IIFE to fix problem
+
 // prove default exports can be a function
 if (TestMod1() === 'TestMod1 PRIVATE STATE') {
   print('GREAT: TestMod1 private state is availble to it');
@@ -39,3 +41,5 @@ print(`es6 template, with arrow functions: ${myFunc()}`);
 //       EVEN when it is never dereferenced!
 //       ... prove this by seeing the in-line expansion log output
 require('TestMod3');
+
+// })(); // KEY: uncomment IIFE to fix problem

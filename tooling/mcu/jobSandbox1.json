@@ -1,0 +1,9 @@
+{
+  "verbose": true,
+  "expr": "save()",
+  "file": "mcu/src/projects/MCU.sandbox.js",
+  "espruino": {
+    "MODULE_URL": "mcu/src/modules|http://www.espruino.com/modules",
+    "MODULE_EXTENSIONS": ".js"
+  }
+}
