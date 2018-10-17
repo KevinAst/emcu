@@ -1,7 +1,8 @@
 {
-  "verbose": true,
+  "verbose": false,
+  "quiet": false,
   "expr": "save()",
-  "file": "mcu/src/projects/MCU.sandbox.js",
+  "COMMENT:file": "mcu/src/projects/MCU.sandbox.js",
   "espruino": {
     "MODULE_URL": "mcu/src/modules|http://www.espruino.com/modules",
     "MODULE_EXTENSIONS": ".js"

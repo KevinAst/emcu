@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "description": "Espruino MCU (Micro Controller Unit)",
   "scripts": {
-    "e:COMMENT": "?? --port COM6 BELOW is temporary",
+    "e:COMMENT": "?? revise commands below",
     "e": "echo '*** Espruino command line:' && espruino --port COM6",
     "e:list": "echo '*** Espruino list devices:' && espruino --list",
-    "e:flash": "echo '*** Espruino flash:' && espruino -j tooling/mcu/jobSandbox1.json --port COM6",
+    "e:flash:sandbox": "echo '*** Espruino flash sandbox:' && espruino -j tooling/mcu/jobSandbox1.json --port COM6 mcu/src/projects/MCU.sandbox.js",
     "pkgReview": "echo '*** Showing outdated installed packages:' && npm outdated --long || true"
   },
   "repository": {

@@ -2,7 +2,7 @@
 
 var TestMod1 = require('TestMod1');
 
-// (function () { // KEY: uncomment IIFE to fix problem
+(function () { // IIFE START: place all in-line code in functions to bypass espruino special processing issues with windows cr/lf
 
 // prove default exports can be a function
 if (TestMod1() === 'TestMod1 PRIVATE STATE') {
@@ -34,7 +34,8 @@ print('expecting "abc-resource" WITHOUT additional "expanding TestMod1.js" log .
       require('TestMod1').abc);
 
 // NOTE: esprino supports SOME es6 constructs HOWEVER in mainline ONLY (NOT Modules)
-var myFunc = () => 'hello world'; // ?? TypeError: Cannot read property 'length' of undefined in TestMod1
+//       ACTUALLY, if modules are uncompressed, it works there too
+var myFunc = () => 'hello world';
 print(`es6 template, with arrow functions: ${myFunc()}`);
 
 // NOTE: simply requiring a module loads it and executes it's inline code
@@ -42,4 +43,4 @@ print(`es6 template, with arrow functions: ${myFunc()}`);
 //       ... prove this by seeing the in-line expansion log output
 require('TestMod3');
 
-// })(); // KEY: uncomment IIFE to fix problem
+})(); // IIFE END
