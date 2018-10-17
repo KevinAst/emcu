@@ -29,6 +29,6 @@
   },
   "homepage": "https://github.com/KevinAst/emcu",
   "devDependencies": {
-    "espruino": "^0.1.14"
+    "espruino": "^0.1.15"
   }
 }

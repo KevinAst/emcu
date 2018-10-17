@@ -2,7 +2,8 @@
 
 var TestMod1 = require('TestMod1');
 
-(function () { // IIFE START: place all in-line code in functions to bypass espruino special processing issues with windows cr/lf
+// (function () { // IIFE START: place all in-line code in functions to bypass espruino special processing issues with windows cr/lf
+                  //             NOTE: as of espruino@0.1.15 it's windows cr/lf appears to be working
 
 // prove default exports can be a function
 if (TestMod1() === 'TestMod1 PRIVATE STATE') {
@@ -43,4 +44,5 @@ print(`es6 template, with arrow functions: ${myFunc()}`);
 //       ... prove this by seeing the in-line expansion log output
 require('TestMod3');
 
-})(); // IIFE END
+// })(); // IIFE END
+print("GREAT: as of espruino@0.1.15 it's windows cr/lf appears to be working!");
