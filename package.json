@@ -7,6 +7,7 @@
     "e": "echo '*** Espruino command line:' && espruino --port COM6",
     "e:list": "echo '*** Espruino list devices:' && espruino --list",
     "e:flash:sandbox": "echo '*** Espruino flash sandbox:' && espruino -j tooling/mcu/jobSandbox1.json --port COM6 mcu/src/projects/MCU.sandbox.js",
+    "e:flash:DiddlySquat": "echo '*** Espruino flash DiddlySquat:' && espruino -j tooling/mcu/jobSandbox1.json --port COM6 mcu/src/projects/MCU.DiddlySquat.eWiFi.js",
     "pkgReview": "echo '*** Showing outdated installed packages:' && npm outdated --long || true"
   },
   "repository": {
