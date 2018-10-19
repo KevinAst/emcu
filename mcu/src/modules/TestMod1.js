@@ -32,3 +32,12 @@ if (require('TestMod2').xyz === 'xyz-resource') {
 else {
   print('BAD: TestMod1 had unexpected result in requiring TestMod2: ' + require('TestMod2').xyz);
 }
+
+// EVEN with sub-directories
+var TestMod4 = require('util/TestMod4');
+if (TestMod4) {
+  print('GREAT: INSIDE OTHER MODULE: TestMod4 was resolved within the util/ directory: ', TestMod4);
+}
+else {
+  print('BAD: INSIDE OTHER MODULE: TestMod4 was NOT resolved within the util/ directory!');
+}

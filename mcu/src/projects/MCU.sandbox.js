@@ -46,3 +46,11 @@ require('TestMod3');
 
 // })(); // IIFE END
 print("GREAT: as of espruino@0.1.15 it's windows cr/lf appears to be working!");
+
+var TestMod4 = require('util/TestMod4');
+if (TestMod4 === 'FROM: TestMod4') {
+  print('GREAT: TestMod4 was resolved within the util/ directory!');
+}
+else {
+  print('BAD: TestMod4 was NOT resolved within the util/ directory!');
+}
