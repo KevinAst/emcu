@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "description": "Espruino MCU (Micro Controller Unit)",
   "scripts": {
-    "e":                   "echo '*** Espruino interactive session (Ctrl-c Ctrl-C to exit):' && cross-var espruino -j tooling/mcu/jobSandbox1.json --port $espruinoPort",
+    "e":                   "echo '*** Espruino interactive session (Ctrl-c Ctrl-C to exit):' && cross-var espruino -j mcu/tooling/espruinoJob.json --port $espruinoPort",
     "e:list":              "echo '*** Espruino list devices:'                                && espruino --list",
-    "e:flash:sandbox":     "echo '*** Espruino flash sandbox:'                               && cross-var espruino -j tooling/mcu/jobSandbox1.json --port $espruinoPort -e \"save()\" mcu/src/projects/MCU.sandbox.js",
-    "e:flash:DiddlySquat": "echo '*** Espruino flash DiddlySquat:'                           && cross-var espruino -j tooling/mcu/jobSandbox1.json --port $espruinoPort -e \"save()\" mcu/src/projects/MCU.DiddlySquat.eWiFi.js",
+    "e:flash:sandbox":     "echo '*** Espruino flash sandbox:'                               && cross-var espruino -j mcu/tooling/espruinoJob.json --port $espruinoPort -e \"save()\" mcu/src/projects/MCU.sandbox.js",
+    "e:flash:DiddlySquat": "echo '*** Espruino flash DiddlySquat:'                           && cross-var espruino -j mcu/tooling/espruinoJob.json --port $espruinoPort -e \"save()\" mcu/src/projects/MCU.DiddlySquat.eWiFi.js",
     "pkgReview":           "echo '*** Showing outdated installed packages:'                  && npm outdated --long || true"
   },
   "repository": {

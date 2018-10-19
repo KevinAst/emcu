@@ -1,0 +1,9 @@
+{
+  "//verbose": "enable this to see actual code sent to espruino!",
+  "verbose": false,
+  "quiet":   false,
+  "espruino": {
+    "MODULE_URL":   "mcu/src/modules|http://www.espruino.com/modules",
+    "MODULE_EXTENSIONS":   ".js"
+  }
+}
