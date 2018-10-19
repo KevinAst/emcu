@@ -4,11 +4,14 @@
 
   "quiet":   true,
 
-  "//expr":  "auto-save code to flash",
-  "expr":    "save()",
+  "//expr":  "auto-save code to flash ... cannot specify here for interactive sessions, because espruino will exit after command executes",
+  "//expr":  "save()",
 
   "//file":  "prefer to specify via command-line",
   "//file":  "mcu/src/projects/MCU.sandbox.js",
+
+  "//ports": "specify here even though volatile, to reduce repeat in command-line ... --port COM6",
+  "//ports": [{ "type": "path", "name": "COM6" }],
 
   "espruino": {
 
