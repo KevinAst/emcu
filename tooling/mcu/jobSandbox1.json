@@ -1,10 +1,21 @@
 {
+  "//verbose": "enable this to see actual code sent to espruino!",
   "verbose": false,
-  "quiet": false,
-  "expr": "save()",
-  "COMMENT:file": "mcu/src/projects/MCU.sandbox.js",
+
+  "quiet":   true,
+
+  "//expr":  "auto-save code to flash",
+  "expr":    "save()",
+
+  "//file":  "prefer to specify via command-line",
+  "//file":  "mcu/src/projects/MCU.sandbox.js",
+
   "espruino": {
-    "MODULE_URL": "mcu/src/modules|http://www.espruino.com/modules",
-    "MODULE_EXTENSIONS": ".js"
+
+    "//MODULE_URL": "specify where to resolve modules (in require()) NOTE: can have depth beneath this",
+    "MODULE_URL":   "mcu/src/modules|http://www.espruino.com/modules",
+
+    "//MODULE_EXTENSIONS": "only resolve non minified code - PRIMARLY to avoid FALSE errors from espruino flash saying: no such file for *.min.js",
+    "MODULE_EXTENSIONS":   ".js"
   }
 }
