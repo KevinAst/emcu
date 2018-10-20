@@ -1,0 +1,34 @@
+{
+  "name": "emcu",
+  "version": "0.1.0",
+  "description": "Espruino MCU (Micro Controller Unit)",
+  "scripts": {
+    "e":                         "echo '*** Espruino interactive session (Ctrl-c Ctrl-C to exit):' && cross-var espruino -j mcu/tooling/espruinoJob.json --port $espruinoPort",
+    "e:list":                    "echo '*** Espruino list devices:'                                && espruino --list",
+    "e:flash:diddlySquat.eWiFi": "echo '*** Espruino flash diddlySquat.eWiFi:'                     && cross-var espruino -j mcu/tooling/espruinoJob.json --port $espruinoPort -e \"save()\" mcu/src/projects/diddlySquat.eWiFi.js",
+    "e:flash:diddlySquat.puck":  "echo '*** Espruino flash diddlySquat.puck:'                     && cross-var espruino -j mcu/tooling/espruinoJob.json --port $espruinoPort -e \"save()\" mcu/src/projects/diddlySquat.puck.js",
+    "pkgReview":                 "echo '*** Showing outdated installed packages:'                  && npm outdated --long || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KevinAst/emcu.git"
+  },
+  "keywords": [
+    "espruino",
+    "mcu",
+    "microcontroller",
+    "js",
+    "javascript",
+    "astx"
+  ],
+  "author": "Kevin J. Bridges <kevinast@gmail.com> (https://github.com/KevinAst)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KevinAst/emcu/issues"
+  },
+  "homepage": "https://github.com/KevinAst/emcu",
+  "devDependencies": {
+    "cross-var": "^1.1.0",
+    "espruino": "^0.1.15"
+  }
+}
