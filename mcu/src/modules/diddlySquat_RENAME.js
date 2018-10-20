@@ -1,21 +1,16 @@
-// MODULE: DiddlySquat.js
-// 
-// DESC:   A sample controller that demonstrates how control logic
-//         can be isolated from other functionality using modules.
-// 
-//         This module contains the DiddlySquat logic, 
-//         stripped of specific hardware knowledge!
-//         ... the hardware knowledge is provided through 
-//             the supplied bindings
-// 
-//         ... see: DOC.DiddlySquat.md
-// 
-// API:    start(bindings, options): meta
-//         -or-
-//         main(bindings, options): meta
+/**
+ * MODULE: diddlySquat.js
+ * 
+ * DESC:   A sample controller that demonstrates how control logic can
+ *         be isolated from the physical hardware (using a bindings
+ *         structure), supporting multiple boards with **no code
+ *         duplication** (using modules).
+ * 
+ * DOCS:   diddlySquat.md
+ */
 
 var mergeObj     = require('mergeObj');
-var log          = require('log').prefix('***DiddlySquat*** ');
+var log          = require('log').prefix('***diddlySquat*** ');
 
 var myWiFi       = require('myWiFi');
 var wifiService  = require('wifiService');
@@ -23,11 +18,11 @@ var telnetServer = require('telnetServer');
 
 // meta data (for diagnostics)
 var meta = {
-  name:    'DiddlySquat',
+  name:    'diddlySquat',
   version: '0.1.0',
 }
 
-// start the DiddlySquat controller
+// start(bindings, options): meta
 var start = exports.start = function(bindings, options) {
 
   // default supplied options
@@ -97,9 +92,7 @@ var start = exports.start = function(bindings, options) {
 }
 
 
-// a DiddlySquat mainline
-// ... invocation is mutually exclusive to start()
-// ... usage minimizes redundant code for various hardware bindings
+// main(bindings, options): meta
 exports.main = function(bindings, options) {
 
   // default supplied options
@@ -122,7 +115,7 @@ exports.main = function(bindings, options) {
   var meta = {};
 
   // start our controller
-  meta.DiddlySquat = start(bindings, options);
+  meta.diddlySquat = start(bindings, options);
 
   // we can also start a telnet server (very simply)
   // ... test this by powering up MCU (no data connection), connect to WiFi, see it's logs!!
