@@ -16,7 +16,7 @@ exports.start = function(wifiName, wifiPass, port, serviceFn) {
 
   // TODO: for some reason, this require() cannot be resolved in-line when it is included in other modules
   //       ... ERROR: Module log not found
-  var log = require('log').prefix('***wifiService*** ');
+  var log = require('util/log').prefix('***wifiService*** ');
 
   // make our wifi connection
   wifi.connect(wifiName, { password : wifiPass }, function(err) {

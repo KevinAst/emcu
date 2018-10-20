@@ -9,8 +9,8 @@
  * DOCS:   diddlySquat.md
  */
 
-var mergeObj     = require('mergeObj');
-var log          = require('log').prefix('***diddlySquat*** ');
+var mergeObj     = require('util/mergeObj');
+var log          = require('util/log').prefix('***diddlySquat*** ');
 
 var myWiFi       = require('myWiFi');
 var wifiService  = require('wifiService');
